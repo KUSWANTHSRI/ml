@@ -1,0 +1,46 @@
+version: "3.1"
+
+rules:
+  # Greet and ask for available options
+  - rule: Greet and ask options
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_ask_option
+
+  # Option selected - Loan Eligibility
+  - rule: Option selected - Loan Eligibility
+    steps:
+      - intent: choose_loan_eligibility
+      - action: utter_ask_gender  # Ask for gender
+
+  # Ask for gender, followed by marital status, dependents, etc.
+  - rule: Ask for marital status after gender
+    steps:
+      - intent: provide_gender  # Intent to capture gender response
+      - action: utter_ask_married  # Ask for marital status
+
+  - rule: Ask for dependents after marital status
+    steps:
+      - intent: provide_married  # Intent to capture marital status response
+      - action: utter_ask_dependents  # Ask for dependents
+
+  - rule: Ask for education after dependents
+    steps:
+      - intent: provide_dependents  # Intent to capture dependents response
+      - action: utter_ask_education  # Ask for education
+
+  - rule: Ask for employment status after education
+    steps:
+      - intent: provide_education  # Intent to capture education response
+      - action: utter_ask_self_employed  # Ask for self-employment
+
+  - rule: Ask for property area after employment status
+    steps:
+      - intent: provide_self_employed  # Intent to capture self-employment response
+      - action: utter_ask_property_area  # Ask for property area
+
+  - rule: Submit loan eligibility data
+    steps:
+      - intent: provide_property_area  # Trigger when all details are provided
+      - action: action_loan_eligibility  # Process and provide loan eligibility result

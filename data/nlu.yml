@@ -1,0 +1,190 @@
+version: "3.1"
+
+nlu:
+  - intent: classify_message
+    examples: |
+      - I need to classify this message.
+      - Can you identify if this is spam or not?
+      - Please classify this message for me.
+      - Is this message spam or ham?
+      - Classify this message.
+      - Spam or ham check.
+      - Classify "Meeting postponed to tomorrow".
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - Bye
+      - See you later
+      - Take care
+
+  - intent: choose_option
+    examples: |
+      - I want to check loan eligibility.
+      - I have a query.
+      - Classify a message for me.
+      - I want to use the classifier.
+      - I choose option 1.
+      - Please select the second option for me.
+      - I want to pick the third choice.
+      - Choose the first option.
+
+  - intent: choose_classifier
+    examples: |
+      - I need to use the classifier.
+      - Can you activate the message classifier?
+      - Start the classification process.
+      - Run the classifier now.
+
+  - intent: provide_details
+    examples: |
+      - My name is John and my mobile is 9876543210.
+      - I live in a rural area.
+      - I am self-employed with 2 dependents.
+      - I need to provide my loan details.
+
+  - intent: provide_loan_details
+    examples: |
+      - My income is 50,000 and my loan amount is 300,000.
+      - I have a credit history and I live in an urban area.
+      - I am not self-employed and I have no dependents.
+      - I need a loan for purchasing a house.
+      - I am [male](gender) and married.
+      - I have [2](dependents) dependents and I am [self-employed](self_employed).
+      - My property is in an [urban](property_area) area.
+
+  - intent: provide_message
+    examples: |
+      - The message is "Win a lottery! Click here."
+      - Here is the message I want to classify.
+      - The content is suspicious.
+      - This is the message: "Free credit score check."
+      - The message is "Win a free iPhone!".
+
+  - intent: query
+    examples: |
+      - I have a query about my account.
+      - Can you tell me how to block my card?
+      - I need help with creating a new account.
+      - I have a question about loans.
+      - How can I block my card?
+      - What are the bank timings?
+
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey
+      - Good morning
+      - Good evening
+
+  - intent: choose_loan_eligibility
+    examples: |
+      - Check my loan eligibility.
+      - I want to apply for a loan.
+      - what is the elgibity of loan
+      -  i want to know eligibility
+  - intent: provide_gender
+    examples: |
+      - I am male.
+      - My gender is female.
+      - I’m a man.
+      - I am a woman.
+      - Male.
+      - Female.
+      - I identify as a man.
+      - I’m a woman.
+      - I’m male.
+      - I’m female.
+
+  - intent: provide_married
+    examples: |
+      - I’m married.
+      - Yes, I am married.
+      - No, I’m not married.
+      - I’m single.
+      - I’m married with kids.
+      - Yes, I’ve been married for 5 years.
+      - No, I’m not married yet.
+      - I am in a relationship but not married.
+      - Yes, I am married.
+      - No, I am not married.
+
+  - intent: provide_dependents
+    examples: |
+      - I have 2 dependents.
+      - I have 1 child.
+      - I don’t have any dependents.
+      - I have 3 dependents.
+      - I have 2 kids.
+      - No dependents.
+      - I have a dependent.
+      - I have 5 dependents.
+      - I have one dependent.
+      - I have no dependents.
+
+  - intent: provide_education
+    examples: |
+      - I completed my high school.
+      - I have a bachelor’s degree.
+      - I graduated from university.
+      - I have a master’s degree.
+      - I am a high school graduate.
+      - I went to college.
+      - I completed my education in arts.
+      - I have a PhD.
+      - I am currently pursuing my degree.
+      - I have a technical diploma.
+
+  - intent: provide_self_employed
+    examples: |
+      - Yes, I’m self-employed.
+      - I own my own business.
+      - I work for myself.
+      - No, I am not self-employed.
+      - I work as a freelancer.
+      - I run my own startup.
+      - I am a business owner.
+      - I am not self-employed.
+      - Yes, I’m a freelancer.
+      - No, I work for a company.
+
+  - intent: provide_property_area
+    examples: |
+      - I live in an urban area.
+      - My property is in the city.
+      - I live in a rural area.
+      - I own land in a suburban area.
+      - I’m in an urban locality.
+      - My property is in a town.
+      - I live in the countryside.
+      - I reside in an urban region.
+      - My property is located in an urban area.
+      - I live in a village.
+
+  - intent: provide_message
+    examples: |
+      - I want to classify a message.
+      - I need help classifying this text.
+      - Can you classify this message for me?
+      - Please analyze this message.
+      - I have a message I need classified.
+      - Help me categorize this text.
+      - Please check this message.
+      - Can you help me classify this content?
+      - I have a message to analyze.
+      - Please determine the type of this message.
+
+  - intent: classify_message
+    examples: |
+      - Can you classify this message for me?
+      - Please analyze this message.
+      - I want to classify this text.
+      - Please determine the category of this message.
+      - Help me classify this message.
+      - I need to know the type of message.
+      - Can you categorize this for me?
+      - Please tell me the classification of this message.
+      - Help me understand what type this message is.
+      - Can you identify what kind of message this is?
+

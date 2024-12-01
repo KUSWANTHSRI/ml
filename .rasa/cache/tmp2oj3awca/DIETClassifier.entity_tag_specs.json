@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-dependents",
+      "2": "I-dependents",
+      "3": "L-dependents",
+      "4": "U-dependents",
+      "5": "B-gender",
+      "6": "I-gender",
+      "7": "L-gender",
+      "8": "U-gender",
+      "9": "B-property_area",
+      "10": "I-property_area",
+      "11": "L-property_area",
+      "12": "U-property_area",
+      "13": "B-self_employed",
+      "14": "I-self_employed",
+      "15": "L-self_employed",
+      "16": "U-self_employed",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-dependents": 1,
+      "I-dependents": 2,
+      "L-dependents": 3,
+      "U-dependents": 4,
+      "B-gender": 5,
+      "I-gender": 6,
+      "L-gender": 7,
+      "U-gender": 8,
+      "B-property_area": 9,
+      "I-property_area": 10,
+      "L-property_area": 11,
+      "U-property_area": 12,
+      "B-self_employed": 13,
+      "I-self_employed": 14,
+      "L-self_employed": 15,
+      "U-self_employed": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

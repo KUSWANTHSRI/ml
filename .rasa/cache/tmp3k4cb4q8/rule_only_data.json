@@ -1,0 +1,11 @@
+{
+  "rule_only_slots": [
+    "gender",
+    "dependents",
+    "education",
+    "married",
+    "property_area",
+    "self_employed"
+  ],
+  "rule_only_loops": []
+}

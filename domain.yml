@@ -1,0 +1,150 @@
+version: "3.1"
+intents:
+  - greet
+  - choose_loan_eligibility
+  - provide_gender
+  - provide_married
+  - provide_dependents
+  - provide_education
+  - provide_self_employed
+  - provide_property_area
+  - provide_message
+  - classify_message
+  - goodbye
+
+entities:
+  - name
+  - mobile
+  - gender
+  - married
+  - dependents
+  - education
+  - self_employed
+  - property_area
+  - message
+
+
+slots:
+  option:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+
+
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+  mobile:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: mobile
+  gender:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: gender
+  married:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: married
+  dependents:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: dependents
+  education:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: education
+  self_employed:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: self_employed
+  property_area:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: property_area
+  message:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: message
+
+forms:
+  simple_form:
+    required_slots:
+      - gender
+      - married
+      - dependents
+      - education
+      - self_employed
+      - property_area
+
+  classify_message_form:
+    required_slots:
+      - message
+
+
+
+responses:
+  utter_greet:
+    - text: "Hi! Welcome to our banking assistant. What's your name? Please choose an option: [Query, Loan Eligibility, Classifier]."
+  
+  utter_ask_option:
+    - text: "Please choose an option: [Query, Loan Eligibility, Classifier]."
+
+  utter_ask_gender:
+    - text: "What's your gender?"
+
+  utter_ask_married:
+    - text: "What's your married status [yes or no]?"
+
+  utter_ask_dependents:
+    - text: "How many dependents do you have?"
+
+  utter_ask_education:
+    - text: "What's your education?"
+
+  utter_ask_self_employed:
+    - text: "Are you self-employed? [yes or no]"
+
+  utter_ask_property_area:
+    - text: "What is your property area? [urban/rural]"
+
+  action_say_data:
+    - text: "Here is the information you provided: Name: {name}, Gender: {gender}, Married: {married}, Dependents: {dependents}, Education: {education}, Self-Employed: {self_employed}, Property Area: {property_area}"
+
+  action_classify_message:
+    - text: "Message classification result: {classification_result}"
+
+  goodbye:
+    - text: "Goodbye! Have a great day."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_ask_missing_info
+  - action_classify_message
+  - action_say_data
+  - action_loan_eligibility

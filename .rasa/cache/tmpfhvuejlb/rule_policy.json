@@ -1,0 +1,29 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"loan_eligibility_form\"}}]": "action_check_loan_eligibility",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"loan_eligibility_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_check_loan_eligibility\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"loan_eligibility\"}}]": "loan_eligibility_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"loan_eligibility\"}}, {\"active_loop\": {\"name\": \"loan_eligibility_form\"}, \"prev_action\": {\"action_name\": \"loan_eligibility_form\"}, \"user\": {\"intent\": \"loan_eligibility\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "loan_eligibility_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"loan_eligibility_form\"}, \"prev_action\": {\"action_name\": \"loan_eligibility_form\"}, \"user\": {\"intent\": \"loan_eligibility\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"loan_eligibility_form\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"loan_eligibility\"}}]",
+      "predicting default action with intent back",
+      "handling active loops and forms - loan_eligibility_form - action_listen",
+      "predicting default action with intent restart",
+      "handling active loops and forms - loan_eligibility_form",
+      "handling active loops and forms - classify_message_form - action_listen",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - classify_message_form",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"loan_eligibility_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_check_loan_eligibility\"}}]"
+    ]
+  }
+}
