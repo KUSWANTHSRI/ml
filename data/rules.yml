@@ -44,3 +44,9 @@ rules:
     steps:
       - intent: provide_property_area  # Trigger when all details are provided
       - action: action_loan_eligibility  # Process and provide loan eligibility result
+
+
+  - rule: Respond to query intent
+    steps:
+      - intent: query
+      - action: action_chatgpt_faq

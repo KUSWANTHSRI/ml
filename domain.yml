@@ -1,6 +1,7 @@
 version: "3.1"
 intents:
   - greet
+  - query
   - choose_loan_eligibility
   - provide_gender
   - provide_married
@@ -9,6 +10,8 @@ intents:
   - provide_self_employed
   - provide_property_area
   - provide_message
+
+
   - classify_message
   - goodbye
 
@@ -21,6 +24,7 @@ entities:
   - education
   - self_employed
   - property_area
+
   - message
 
 
@@ -106,7 +110,7 @@ forms:
 
 responses:
   utter_greet:
-    - text: "Hi! Welcome to our banking assistant. What's your name? Please choose an option: [Query, Loan Eligibility, Classifier]."
+    - text: "Hi! Welcome to our banking assistant. "
   
   utter_ask_option:
     - text: "Please choose an option: [Query, Loan Eligibility, Classifier]."
@@ -129,6 +133,9 @@ responses:
   utter_ask_property_area:
     - text: "What is your property area? [urban/rural]"
 
+  utter_ask_message:
+    - text: "enter the message you want to classify"
+
   action_say_data:
     - text: "Here is the information you provided: Name: {name}, Gender: {gender}, Married: {married}, Dependents: {dependents}, Education: {education}, Self-Employed: {self_employed}, Property Area: {property_area}"
 
@@ -148,3 +155,6 @@ actions:
   - action_classify_message
   - action_say_data
   - action_loan_eligibility
+  - action_spam_detection
+  - action_chatgpt_faq
+  - action_classifier_predict

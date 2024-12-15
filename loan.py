@@ -19,12 +19,12 @@ for col in categorical_columns:
 
 # Handle missing values
 # For numerical columns, use mean imputation
-numerical_columns = ['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History']
+numerical_columns = ['ApplicantIncome',  'Credit_History']
 imputer = SimpleImputer(strategy='mean')
 df[numerical_columns] = imputer.fit_transform(df[numerical_columns])
 
 # Select features and target
-X = df[['Gender', 'Married', 'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History', 'Property_Area']]
+X = df[[ 'ApplicantIncome', 'Credit_History']]
 y = df['Loan_Status']
 
 # Split data

@@ -1,3 +1,19 @@
 version: "3.1"
 
 stories:
+- story: Option selected - classifier
+  steps:
+  - intent: classify_message
+  - action: utter_ask_message  # Ask the user to provide the message
+  - intent: provide_message  # User provides the message
+  - action: action_classifier_predict  # Process the message
+
+
+
+- story: query flow 
+
+  steps:
+  - intent: query
+  - action: action_chatgpt_faq
+
+
